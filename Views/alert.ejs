@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin SafeSpace Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <%- include ('components/navbar.ejs') %>
+      
+        <!-- Main content -->
+        <main class="flex-1 p-6">
+            <h1 class="text-2xl font-bold mb-4">Alerts</h1>
+            
+            <div class="bg-white p-6 rounded-lg shadow">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold">Alerts</h2>
+                    <div>
+                        <select class="border p-2 rounded">
+                            <option>October</option>
+                        </select>
+                    </div>
+                </div>
+                <table class="w-full table-auto">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">User-Name</th>
+                            <th class="px-4 py-2">Location</th>
+                            <th class="px-4 py-2">Visual description</th>
+                            <th class="px-4 py-2">Disaster Type</th>
+                            <th class="px-4 py-2">Date</th>
+                            <th class="px-4 py-2">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2 flex items-center">
+                                <img src="user-image.png" alt="User Image" class="w-8 h-8 rounded-full mr-2">
+                                Stephan Louis
+                            </td>
+                            <td class="border px-4 py-2">Mile 17</td>
+                            <td class="border px-4 py-2"><img src="flood-image.png" alt="Flood Image" class="w-16 h-16 rounded"></td>
+                            <td class="border px-4 py-2">Flood</td>
+                            <td class="border px-4 py-2">12/06/23</td>
+                            <td class="border px-4 py-2 text-center">
+                                <span class="text-green-500 material-icons">check_circle</span>
+                                <span class="text-red-500 material-icons">delete</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2 flex items-center">
+                                <img src="user-image.png" alt="User Image" class="w-8 h-8 rounded-full mr-2">
+                                Stephan Louis
+                            </td>
+                            <td class="border px-4 py-2">Mile 17</td>
+                            <td class="border px-4 py-2"><img src="flood-image.png" alt="Flood Image" class="w-16 h-16 rounded"></td>
+                            <td class="border px-4 py-2">Flood</td>
+                            <td class="border px-4 py-2">12/06/23</td>
+                            <td class="border px-4 py-2 text-center">
+                                <span class="text-green-500 material-icons">check_circle</span>
+                                <span class="text-red-500 material-icons">delete</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2 flex items-center">
+                                <img src="user-image.png" alt="User Image" class="w-8 h-8 rounded-full mr-2">
+                                Stephan Louis
+                            </td>
+                            <td class="border px-4 py-2">Mile 17</td>
+                            <td class="border px-4 py-2"><img src="flood-image.png" alt="Flood Image" class="w-16 h-16 rounded"></td>
+                            <td class="border px-4 py-2">Flood</td>
+                            <td class="border px-4 py-2">12/06/23</td>
+                            <td class="border px-4 py-2 text-center">
+                                <span class="text-green-500 material-icons">check_circle</span>
+                                <span class="text-red-500 material-icons">delete</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://fonts.googleapis.com/icon?family=Material+Icons"></script>
+</body>
+</html>

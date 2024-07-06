@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Emergency Responder</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="flex">
+  <%- include('components/navbar.ejs') %>
+  <div class="flex-1 p-6 bg-gray-100 overflow-y-auto">
+    <div class="bg-white p-6 shadow-lg">
+      <h1 class="text-3xl font-bold">Add Emergency Responder</h1>
+      <form action="/add_responder" method="POST" class="mt-6 space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Name</label>
+          <input type="text" name="name" class="mt-1 px-4 py-2 border rounded-md w-full">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Location</label>
+          <input type="text" name="location" class="mt-1 px-4 py-2 border rounded-md w-full">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Contact</label>
+          <input type="text" name="contact" class="mt-1 px-4 py-2 border rounded-md w-full">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Category</label>
+          <input type="text" name="category" class="mt-1 px-4 py-2 border rounded-md w-full">
+        </div>
+        <div>
+          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md">Add Responder</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

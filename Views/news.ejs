@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage News</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="flex">
+  <%- include('components/navbar.ejs') %>
+  <div class="flex-1 p-6 bg-gray-100 overflow-y-auto">
+    <div class="bg-white p-6 shadow-lg">
+      <h1 class="text-3xl font-bold">Manage News</h1>
+      <a href="/add_news" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded-full inline-block">Add News</a>
+    </div>
+    <div class="bg-white mt-6 p-6 shadow-lg rounded-md">
+      <table class="w-full">
+        <thead class="bg-gray-100">
+          <tr>
+            <th class="text-left p-4">IMAGE</th>
+            <th class="text-left p-4">TITLE</th>
+            <th class="text-left p-4">AUTHOR</th>
+            <th class="text-left p-4">DATE</th>
+            <th class="text-left p-4">ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% news.forEach(article => { %>
+            <tr class="bg-white border-b">
+              <td class="p-4"><img src="/uploads/<%= article.image %>" alt="<%= article.title %>" class="w-16 h-16 object-cover"></td>
+              <td class="p-4"><%= article.title %></td>
+              <td class="p-4"><%= article.author %></td>
+              <td class="p-4"><%= article.date %></td>
+              <td class="p-4 flex space-x-2">
+                <a href="/edit_news/<%= article.id %>" class="text-blue-500">✏️</a>
+                <form action="/delete_news/<%= article.id %>" method="POST" class="inline">
+                  <button type="submit" class="text-red-500">🗑️</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
